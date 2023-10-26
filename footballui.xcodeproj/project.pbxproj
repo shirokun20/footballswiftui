@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EEE3A582D06FDAF66347339 /* Pods_footballuiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132292396F019B35D27B2CB0 /* Pods_footballuiTests.framework */; };
+		274F5BBA9EE61F69F6C4A34E /* Pods_footballui_footballuiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6166D9A1E5389CEB64F7F3D0 /* Pods_footballui_footballuiUITests.framework */; };
+		823A822E6B9D222B91A39F56 /* Pods_footballui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD774C5C2773161BF370A47 /* Pods_footballui.framework */; };
 		FA27E24C2AC2DB690023841D /* footballuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27E24B2AC2DB690023841D /* footballuiApp.swift */; };
 		FA27E2502AC2DB6A0023841D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA27E24F2AC2DB6A0023841D /* Assets.xcassets */; };
 		FA27E2532AC2DB6A0023841D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA27E2522AC2DB6A0023841D /* Preview Assets.xcassets */; };
@@ -48,6 +51,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		132292396F019B35D27B2CB0 /* Pods_footballuiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_footballuiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D5D15AB050AA87B7ACC396C /* Pods-footballui-footballuiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-footballui-footballuiUITests.debug.xcconfig"; path = "Target Support Files/Pods-footballui-footballuiUITests/Pods-footballui-footballuiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6166D9A1E5389CEB64F7F3D0 /* Pods_footballui_footballuiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_footballui_footballuiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7549C337C730798F85428220 /* Pods-footballuiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-footballuiTests.release.xcconfig"; path = "Target Support Files/Pods-footballuiTests/Pods-footballuiTests.release.xcconfig"; sourceTree = "<group>"; };
+		A9112E9086A84DE98E9FA385 /* Pods-footballui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-footballui.debug.xcconfig"; path = "Target Support Files/Pods-footballui/Pods-footballui.debug.xcconfig"; sourceTree = "<group>"; };
+		A9AD38A527777CE8A5DEF08C /* Pods-footballuiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-footballuiTests.debug.xcconfig"; path = "Target Support Files/Pods-footballuiTests/Pods-footballuiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ACD774C5C2773161BF370A47 /* Pods_footballui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_footballui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC9A76A56A17EB6A4F25B5CD /* Pods-footballui-footballuiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-footballui-footballuiUITests.release.xcconfig"; path = "Target Support Files/Pods-footballui-footballuiUITests/Pods-footballui-footballuiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D0C43792EF5F76E063629106 /* Pods-footballui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-footballui.release.xcconfig"; path = "Target Support Files/Pods-footballui/Pods-footballui.release.xcconfig"; sourceTree = "<group>"; };
 		FA27E2482AC2DB690023841D /* footballui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = footballui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA27E24B2AC2DB690023841D /* footballuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = footballuiApp.swift; sourceTree = "<group>"; };
 		FA27E24F2AC2DB6A0023841D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823A822E6B9D222B91A39F56 /* Pods_footballui.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EEE3A582D06FDAF66347339 /* Pods_footballuiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,12 +107,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				274F5BBA9EE61F69F6C4A34E /* Pods_footballui_footballuiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07EF59F495DDF41B2ACC272C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACD774C5C2773161BF370A47 /* Pods_footballui.framework */,
+				6166D9A1E5389CEB64F7F3D0 /* Pods_footballui_footballuiUITests.framework */,
+				132292396F019B35D27B2CB0 /* Pods_footballuiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA30A5E9727D024E7954B3AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9112E9086A84DE98E9FA385 /* Pods-footballui.debug.xcconfig */,
+				D0C43792EF5F76E063629106 /* Pods-footballui.release.xcconfig */,
+				1D5D15AB050AA87B7ACC396C /* Pods-footballui-footballuiUITests.debug.xcconfig */,
+				BC9A76A56A17EB6A4F25B5CD /* Pods-footballui-footballuiUITests.release.xcconfig */,
+				A9AD38A527777CE8A5DEF08C /* Pods-footballuiTests.debug.xcconfig */,
+				7549C337C730798F85428220 /* Pods-footballuiTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FA27E23F2AC2DB690023841D = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +144,8 @@
 				FA27E25B2AC2DB6B0023841D /* footballuiTests */,
 				FA27E2652AC2DB6B0023841D /* footballuiUITests */,
 				FA27E2492AC2DB690023841D /* Products */,
+				EA30A5E9727D024E7954B3AB /* Pods */,
+				07EF59F495DDF41B2ACC272C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -232,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA27E26C2AC2DB6B0023841D /* Build configuration list for PBXNativeTarget "footballui" */;
 			buildPhases = (
+				2FD641A0A7E5B12A7823342E /* [CP] Check Pods Manifest.lock */,
 				FA27E2442AC2DB690023841D /* Sources */,
 				FA27E2452AC2DB690023841D /* Frameworks */,
 				FA27E2462AC2DB690023841D /* Resources */,
+				604CBD9C914246A699D053B1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,6 +291,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA27E26F2AC2DB6B0023841D /* Build configuration list for PBXNativeTarget "footballuiTests" */;
 			buildPhases = (
+				147F26036464547B3DD94508 /* [CP] Check Pods Manifest.lock */,
 				FA27E2542AC2DB6B0023841D /* Sources */,
 				FA27E2552AC2DB6B0023841D /* Frameworks */,
 				FA27E2562AC2DB6B0023841D /* Resources */,
@@ -267,9 +310,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA27E2722AC2DB6B0023841D /* Build configuration list for PBXNativeTarget "footballuiUITests" */;
 			buildPhases = (
+				71BD0772C288DE47FD95AFB9 /* [CP] Check Pods Manifest.lock */,
 				FA27E25E2AC2DB6B0023841D /* Sources */,
 				FA27E25F2AC2DB6B0023841D /* Frameworks */,
 				FA27E2602AC2DB6B0023841D /* Resources */,
+				8C6BD3232E9B8C65CB8A4659 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -349,6 +394,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		147F26036464547B3DD94508 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-footballuiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FD641A0A7E5B12A7823342E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-footballui-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		604CBD9C914246A699D053B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-footballui/Pods-footballui-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-footballui/Pods-footballui-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-footballui/Pods-footballui-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71BD0772C288DE47FD95AFB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-footballui-footballuiUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C6BD3232E9B8C65CB8A4659 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-footballui-footballuiUITests/Pods-footballui-footballuiUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-footballui-footballuiUITests/Pods-footballui-footballuiUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-footballui-footballuiUITests/Pods-footballui-footballuiUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA27E2442AC2DB690023841D /* Sources */ = {
@@ -459,6 +607,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -516,6 +665,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -528,6 +678,7 @@
 		};
 		FA27E26D2AC2DB6B0023841D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9112E9086A84DE98E9FA385 /* Pods-footballui.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -536,6 +687,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"footballui/Preview Content\"";
 				DEVELOPMENT_TEAM = F4YFCH9LK5;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -557,6 +709,7 @@
 		};
 		FA27E26E2AC2DB6B0023841D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0C43792EF5F76E063629106 /* Pods-footballui.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -565,6 +718,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"footballui/Preview Content\"";
 				DEVELOPMENT_TEAM = F4YFCH9LK5;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -586,6 +740,7 @@
 		};
 		FA27E2702AC2DB6B0023841D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9AD38A527777CE8A5DEF08C /* Pods-footballuiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -606,6 +761,7 @@
 		};
 		FA27E2712AC2DB6B0023841D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7549C337C730798F85428220 /* Pods-footballuiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -626,6 +782,7 @@
 		};
 		FA27E2732AC2DB6B0023841D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D5D15AB050AA87B7ACC396C /* Pods-footballui-footballuiUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -644,6 +801,7 @@
 		};
 		FA27E2742AC2DB6B0023841D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC9A76A56A17EB6A4F25B5CD /* Pods-footballui-footballuiUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

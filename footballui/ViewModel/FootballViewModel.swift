@@ -37,13 +37,19 @@ class FootballViewModelImpl: ObservableObject, FootballViewModel {
                 guard let self = self else { return }
                 switch res {
                 case .finished:
-                    self.state = .success(content: self.leagues)
+                    let dataLeagues = self.leagues.filter { item in
+                        return item.strSport?.lowercased().contains("soccer") == true
+                    }
+                    self.state = .success(content: dataLeagues)
                 case .failure(let error):
                     self.state = .failed(error: error)
                 }
             } receiveValue: { [weak self] response in
                 guard let self = self else { return }
-                self.leagues = response.leagues
+                let dataLeagues = response.leagues.filter { item in
+                    return item.strSport?.lowercased().contains("soccer") == true
+                }
+                self.leagues = dataLeagues
             }
         self.cancellables.insert(cancellable)
     }
