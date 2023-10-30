@@ -46,7 +46,7 @@ struct TeamView: View {
                             ToolbarItem(placement: .navigationBarLeading) {
                                 VStack (alignment: .leading) {
                                     Text("Teams From").font(.headline)
-                                    Text("\(nameLeague!)").font(.subheadline)
+                                    Text("\(nameLeague ?? "Kosong")").font(.subheadline)
                                 }
                             }
                         }
@@ -59,6 +59,7 @@ struct TeamView: View {
         }
         .navigationBarBackButtonHidden(true)
         .onAppear() {
+            print("yang di panggil \(nameLeague ?? "")")
             self.viewModel.getTeamByNl(nameLeague: "\(nameLeague ?? "")")
         }
     }

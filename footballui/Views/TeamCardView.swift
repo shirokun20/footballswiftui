@@ -12,12 +12,20 @@ struct TeamCardView: View {
     @State private var isFavorite = false
     var body: some View {
         HStack {
-            URLImage(url: URL(string: team.strTeamBadge ?? "https://www.iconpacks.net/icons/4/free-no-image-icon-14596-thumb.png")!) { image in
-                image
+            if let imageUrl = URL(string: team.strTeamBadge ?? ""),
+               imageUrl.isValidURL() {
+                URLImage(url: imageUrl) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
+                .frame(width: 50, height: 50)
+            } else {
+                Image(systemName: "photo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .frame(width: 50, height: 50)
             }
-            .frame(width: 50, height: 50)
             VStack(alignment: .leading, spacing: 4) {
                 Text(team.strTeam ?? "-")
                     .foregroundColor(.black)
@@ -43,7 +51,15 @@ struct TeamCardView: View {
     }
 }
 
+
+
 #Preview(traits: .sizeThatFitsLayout)  {
     TeamCardView(team: Team.dummyData)
         .previewLayout(.sizeThatFits)
+}
+
+extension URL {
+    func isValidURL() -> Bool {
+        return UIApplication.shared.canOpenURL(self)
+    }
 }

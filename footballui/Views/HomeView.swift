@@ -10,41 +10,57 @@ import Combine
 
 struct HomeView: View {
     @StateObject var viewModel = FootballViewModelImpl(service: FootballServiceImpl())
-    
+    @State private var isToTeam = false
+    @State private var selectedTeam: String?
     var body: some View {
         Group {
             switch viewModel.state {
             case .loading:
                 ProgressView()
             case .success(let content):
-                NavigationView {
-                    VStack(alignment: .leading) {
-                        SearchBarView(text: $viewModel.searchText, onSearchButtonTapped: {
-                            viewModel.onSubmitSearch()
-                        })
-                        .padding(.horizontal)
-                        if content.isEmpty {
-                            Text("No leagues available.")
-                                .foregroundColor(.gray)
-                                .padding()
-                                .frame(maxWidth: .infinity, maxHeight:  .infinity)
-                        } else {
-                            List {
-                                ForEach(content) { league in
-                                    NavigationLink(destination: {
-                                        TeamView(nameLeague: .constant(league.strLeague ?? ""))
-                                    }) {
-                                        LeagueView(league: league)
-                                            .frame(maxWidth: .infinity, alignment: .leading)
+                TabView {
+                    NavigationView {
+                        VStack(alignment: .leading) {
+                            SearchBarView(text: $viewModel.searchText, onSearchButtonTapped: {
+                                viewModel.onSubmitSearch()
+                            })
+                            .padding(.horizontal)
+                            if content.isEmpty {
+                                Text("No leagues available.")
+                                    .foregroundColor(.gray)
+                                    .padding()
+                                    .frame(maxWidth: .infinity, maxHeight:  .infinity)
+                            } else {
+                                List {
+                                    ForEach(content) { league in
+                                        Button(action: {
+                                            selectedTeam = league.strLeague
+                                            isToTeam.toggle()
+                                        }) {
+                                            LeagueView(league: league)
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                        }
+                                        .fullScreenCover(isPresented: $isToTeam) {
+                                            TeamView(nameLeague: $selectedTeam)
+                                                .navigationBarTitle("", displayMode: .inline)
+                                        }
                                     }
                                 }
+                                .refreshable {
+                                    viewModel.getLeagues()
+                                }
                             }
-                            .refreshable {
-                                viewModel.getLeagues()
-                            }
-                        }
+                        }.navigationTitle(Text("Leagues"))
+                    }.tabItem {
+                        Image(systemName: "house.fill")
+                        Text("Home")
                     }
-                    .navigationTitle(Text("Leagues"))
+                    // Tab 3
+                    Text("Comming Soon")
+                        .tabItem {
+                            Image(systemName: "heart.fill")
+                            Text("Favorite")
+                        }
                 }
             case .failed(let error):
                 ErrorView(error: error) {
@@ -57,6 +73,7 @@ struct HomeView: View {
         }
     }
 }
+
 
 #Preview {
     HomeView()

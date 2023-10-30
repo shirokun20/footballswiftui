@@ -30,7 +30,6 @@ struct LeagueView: View {
                     .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
             }
             Spacer()
-            Image(systemName: "chevron.right")
         }
     }
 }
