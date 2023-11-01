@@ -22,15 +22,19 @@ struct TeamView: View {
                 case .success(let content):
                         VStack(alignment: .leading) {
                             if content.isEmpty {
-                                Text("No leagues available.")
+                                Text("No teams available.")
                                     .foregroundColor(.gray)
                                     .padding()
                                     .frame(maxWidth: .infinity, maxHeight:  .infinity)
                             } else {
                                 List {
                                     ForEach(content) { team in
-                                        TeamCardView(team: team)
-                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                        TeamCardView(team: team, isFavorite: viewModel.isFavorite(team: team), onFavoriteTapped: {
+                                            viewModel.setFavorite(team: team)
+                                        }, onUnFavoriteTapped: {
+                                            viewModel.rmFavorite(team: team)
+                                        })
+                                        .frame(maxWidth: .infinity, alignment: .leading)
                                     }
                                 }
                                 .refreshable {

@@ -32,7 +32,7 @@ struct SearchBarView: View {
                     .font(.title2)
             }
         }
-        .padding(.vertical, 8)
+        .padding(.bottom, 8)
     }
 }
 

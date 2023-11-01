@@ -10,11 +10,15 @@ import Combine
 
 protocol TeamViewModel {
     func getTeamByNl(nameLeague: String)
+    func setFavorite(team: Team)
+    func rmFavorite(team: Team)
+    func isFavorite(team: Team) -> Bool
 }
 
 class TeamViewModelImpl: ObservableObject, TeamViewModel {
-    
+   
     private let service: FootballService
+    let lsService = LocalStorageService()
     private(set) var teams = [Team]()
     private var cancellables = Set<AnyCancellable>()
     
@@ -41,5 +45,19 @@ class TeamViewModelImpl: ObservableObject, TeamViewModel {
                 self.teams = response.teams
             }
         self.cancellables.insert(cancellable)
+    }
+    
+    func setFavorite(team: Team) {
+        self.lsService.setFavoriteTeam(team)
+        self.state = .success(content: self.teams)
+    }
+    
+    func rmFavorite(team: Team) {
+        self.lsService.removeFavoriteTeam(team)
+        self.state = .success(content: self.teams)
+    }
+    
+    func isFavorite(team: Team) -> Bool {
+        return self.lsService.favoriteTeams.contains(where: { $0.idTeam == team.idTeam })
     }
 }

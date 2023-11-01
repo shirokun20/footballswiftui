@@ -9,7 +9,9 @@ import SwiftUI
 import URLImage
 struct TeamCardView: View {
     let team: Team
-    @State private var isFavorite = false
+    var isFavorite = false
+    var onFavoriteTapped: () -> Void
+    var onUnFavoriteTapped: () -> Void
     var body: some View {
         HStack {
             if let imageUrl = URL(string: team.strTeamBadge ?? ""),
@@ -45,7 +47,12 @@ struct TeamCardView: View {
                 .foregroundColor(isFavorite ? .red : .gray)
                 .font(.system(size: 20))
                 .onTapGesture {
-                    self.isFavorite.toggle()
+                    if isFavorite {
+                        onUnFavoriteTapped()
+                    } else {
+                        onFavoriteTapped()
+                    }
+                    
                 }
         }
     }
@@ -54,8 +61,11 @@ struct TeamCardView: View {
 
 
 #Preview(traits: .sizeThatFitsLayout)  {
-    TeamCardView(team: Team.dummyData)
-        .previewLayout(.sizeThatFits)
+    TeamCardView(team: Team.dummyData, isFavorite: false, onFavoriteTapped: {
+        
+    }, onUnFavoriteTapped: {
+        
+    }).previewLayout(.sizeThatFits)
 }
 
 extension URL {
